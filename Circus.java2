@@ -1,0 +1,141 @@
+package ua.lviv.iot.Lab1;
+
+public class Circus {
+	private int number_of_places;
+	private int number_of_performances_per_year;
+	private String addres;
+
+	private String name_of_circus;
+	private int ticket_price;
+
+	private static int dissatisfied_visitors = 0;
+
+	protected int square;
+	protected int year_of_foundation;
+
+	Circus() {
+
+	}
+
+	Circus(int number_of_places, int number_of_performances_per_year, String addres, String name_of_circus,
+			int ticket_price, int square, int year_of_foundation) {
+		this.number_of_places = number_of_places;
+		this.number_of_performances_per_year = number_of_performances_per_year;
+		this.addres = addres;
+		this.name_of_circus = name_of_circus;
+		this.ticket_price = ticket_price;
+		this.square = square;
+		this.year_of_foundation = year_of_foundation;
+	}
+
+	Circus(int number_of_places, int number_of_performances_per_year, String addres, String name_of_circus) {
+		this.number_of_places = number_of_places;
+		this.number_of_performances_per_year = number_of_performances_per_year;
+		this.addres = addres;
+		this.name_of_circus = name_of_circus;
+
+	}
+
+	public static void printDissatisfied_visitors() {
+		System.out.println("Dissatisfied visitors:" + dissatisfied_visitors);
+	}
+
+	public String ToString() {
+		return "Number of place is" + this.number_of_places + "\n" + "Number of performances per year is:"
+				+ this.number_of_performances_per_year + "\n" + "Addres is:" + this.addres + "\n" + "Name_of_circus is:"
+				+ this.name_of_circus + "\n" + "Ticket_price is:" + this.ticket_price + "\n" + "Square is:"
+				+ this.square + "\n" + "Year of foundation is:" + this.year_of_foundation + "\n";
+
+	}
+
+	public void setnumber_of_places(int number_of_places) {
+		this.number_of_places = number_of_places;
+	}
+
+	public void setNumber_of_performances_per_year(int number_of_reformances_per_year) {
+		this.number_of_performances_per_year = number_of_reformances_per_year;
+	}
+
+	public void setAddres(String addres) {
+		this.addres = addres;
+	}
+
+	public void setName_of_circus(String name_of_circus) {
+		this.name_of_circus = name_of_circus;
+	}
+
+	public void setTicket_price(int ticket_price) {
+		this.ticket_price = ticket_price;
+	}
+
+	public void setSquare(int square) {
+		this.square = square;
+	}
+
+	public void setYear_of_foundation(int year_of_foundation) {
+		this.year_of_foundation = year_of_foundation;
+	}
+
+	public int getNumber_of_places() {
+		return number_of_places;
+	}
+
+	public int getNumber_of_performances_per_year() {
+		return number_of_performances_per_year;
+	}
+
+	public String getAddres() {
+		return addres;
+	}
+
+	public String getName_of_circus() {
+		return name_of_circus;
+	}
+
+	public int getTicket_price() {
+		return ticket_price;
+	}
+
+	public int getSquare() {
+		return square;
+	}
+
+	public int getYear_of_foundation() {
+		return year_of_foundation;
+	}
+
+	public void resetValues(int number_of_places, int number_of_performances_per_year, String addres,
+			String name_of_circus, int ticket_price, int square, int year_of_foundation) {
+		this.number_of_places = number_of_places;
+		this.number_of_performances_per_year = number_of_performances_per_year;
+		this.addres = addres;
+		this.name_of_circus = name_of_circus;
+		this.ticket_price = ticket_price;
+		this.square = square;
+		this.year_of_foundation = year_of_foundation;
+	}
+
+	public void resetValues(int number_of_places, int number_of_performances_per_year, String addres,
+			String name_of_circus) {
+		this.number_of_places = number_of_places;
+		this.number_of_performances_per_year = number_of_performances_per_year;
+		this.addres = addres;
+		this.name_of_circus = name_of_circus;
+
+	}
+
+	public static void main(String[] args) {
+
+		Circus Slam = new Circus();
+		Circus Dream = new Circus(1500, 150, "Liva st", "Dream", 10, 2, 4);
+		Circus Circle = new Circus(500, 100, "Prava st", "Circle");
+
+		System.out.println(Slam.ToString() + "\n");
+		System.out.println(Dream.ToString() + "\n");
+		System.out.println(Circle.ToString() + "\n");
+
+		Circus.printDissatisfied_visitors();
+
+	}
+
+}
