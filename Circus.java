@@ -131,7 +131,7 @@ public class Circus {
 		System.out.println(dream.ToString() + "\n");
 		System.out.println(circle.ToString() + "\n");
 
-		Circus.printDissatisfied_visitors();
+		Circus.printDissatisfiedVisitors();
 
 	}
 
